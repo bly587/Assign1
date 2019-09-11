@@ -1,2 +1,5 @@
-ACTG
-GTCA
+ACTGcgtcgcgcat
+GTCAccg
+ATCG
+ggca
+ttcA
