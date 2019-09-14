@@ -1,13 +1,4 @@
-/*
-Titan Mitchell
-2327159
-tmitchell@chapman.edu
-CPSC 350 - 02
-Assignment 1
-assign1.cpp includes all functions to read in a list and calculate the mean, sum,
-variance, and standard deviation of the lengths of strings. Then it prints out
-1000 strings following the same statistics.
-*/
+//assign1.cpp by Titan Mitchell
 #include <string>
 #include <fstream>
 #include <iostream>
@@ -19,12 +10,6 @@ variance, and standard deviation of the lengths of strings. Then it prints out
 using namespace std;
 
 //function to solve for gaussian distribution
-/*
-a. Name of the function
-b. A description of the value returned and its type, if applicable
-c. A description of each parameter and its type, if applicable
-d. A description of any exceptions thrown, if applicable
-*/
 /*
 gDistribution()
 returns a float which contains the gaussian distribution
