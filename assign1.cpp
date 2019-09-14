@@ -170,7 +170,6 @@ int main(int argc, char** argr)
   //allows for multiple submissions
   while(user == "yes")
   {
-    cout << fileName << endl;
     //open file
     ofstream myfile;
     ofstream variance;
@@ -297,7 +296,6 @@ int main(int argc, char** argr)
       //update number of lines
       numOfLines++;
     }
-    cout << "a variable holds " << a << endl;
     float mean = meanOfStrings(varianceFile, numOfLines);
     float varianceNum = varianceOfStrings(varianceFile, mean, numOfLines);
     float pOfA = probability(a, sumOfLengths);
@@ -354,14 +352,6 @@ int main(int argc, char** argr)
     pOfT += pOfC;
     //find out what amount of nucleotides should be printed out to obtain same average
     //print out what we found using funcitons
-    cout << "The number of lines read in " << numOfLines << endl;
-    cout << "The sum of line lengths read in " << sumOfLengths << endl;
-    cout << "The mean of lengths read in " << mean << endl;
-    cout << "The variance is " << varianceNum << endl;
-    cout << "The probability of a is " << pOfA << endl;
-    cout << "The probability of G is " << pOfG << endl;
-    cout << "The probability of C is " << pOfC << endl;
-    cout << "The probability of T is " << pOfT << endl;
     //open ouput file
     ofstream output;
     output.open("titanMitchell.out");
@@ -392,8 +382,6 @@ int main(int argc, char** argr)
       d = round(d);
       for(int j = 0; j < d; ++j)
       {
-        cout << "The d is : " << d << endl;
-        cout << "J is : " << j << endl;
         //new random number every iteration to ensure the probabilty of different letters
         double randNuc = ((double) rand() / (RAND_MAX));
         //checks to see if that letter should be printed and if that letter still has an amount that can be printed
@@ -491,7 +479,6 @@ int main(int argc, char** argr)
           //has to be else if to check for t's condition
         }
       }
-      cout<<"new line"<<endl;
       output << "\n";
     }
     //gaussian distribution
