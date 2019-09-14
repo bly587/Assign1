@@ -4,8 +4,9 @@ Titan Mitchell
 tmitchell@chapman.edu
 CPSC 350 - 02
 Assignment 1
-
-
+assign1.cpp includes all functions to read in a list and calculate the mean, sum,
+variance, and standard deviation of the lengths of strings. Then it prints out
+1000 strings following the same statistics.
 */
 #include <string>
 #include <fstream>
@@ -17,8 +18,18 @@ Assignment 1
 #include <time.h>
 using namespace std;
 
-
 //function to solve for gaussian distribution
+/*
+a. Name of the function
+b. A description of the value returned and its type, if applicable
+c. A description of each parameter and its type, if applicable
+d. A description of any exceptions thrown, if applicable
+*/
+/*
+gDistribution()
+returns a float which contains the gaussian distribution
+parameters: variance, mean, and 2 random numbers between 0 and 1
+*/
 float gDistribution(float varianceNum, float mean, double randA, double randB)
 {
   float sDev = sqrt(varianceNum);
@@ -30,8 +41,14 @@ float gDistribution(float varianceNum, float mean, double randA, double randB)
   return d;
 }
 //function for variance
+/*
+varianceOfStrings()
+returns the variance from the file just read in
+paramters: filneame, mean, number of lines in the file
+*/
 float varianceOfStrings(string filename, float mean, int numOfLines)
 {
+  //reads in from variance file where the numbers are stored
   ifstream myfile (filename);
   float varianceNum = 0;
   string line = "";
@@ -59,8 +76,14 @@ float varianceOfStrings(string filename, float mean, int numOfLines)
 }
 //sum of lengths
 //function for mean
+/*
+meanOfStrings()
+returns the mean of all the strings
+paramters: filneame and numOfLines
+*/
 float meanOfStrings(string filename, int numOfLines)
 {
+  //takes in variance file to read in the numbers
   ifstream myfile (filename);
   float mean = 0;
   string line = "";
@@ -74,6 +97,11 @@ float meanOfStrings(string filename, int numOfLines)
 }
 //
 //funciton for converting line to lowercase
+/*
+converter()
+returns a string that is all the letters in the string entered just lowercase
+paramters: Enter a string that you would like to make lowercase
+*/
 string converter(string s)
 {
   char c;
@@ -89,6 +117,11 @@ string converter(string s)
   return updated;
 }
 //solve for probability of each nucleotide
+/*
+probability
+returns a float that contains the number of times a nucleotide was counted divided by the total # of nucleotides
+parameter: The nucleotide you want the probability for and the total number of nucleotides
+*/
 float probability(int nucleotide, int sumOfLengths)
 {
   //must type cast at least one variable to get a float value
@@ -472,9 +505,7 @@ int main(int argc, char** argr)
           }
           //has to be else if to check for t's condition
         }
-        }
-
-      //cout << "The j is: " << j << endl;
+      }
       cout<<"new line"<<endl;
       output << "\n";
     }
